@@ -49,13 +49,14 @@ const Btns = () => {
                     borderBottom: '1px solid rgb(200, 200, 200)',
                     paddingBottom: '1rem',
                     margin: '1rem 1rem 0 8rem',
-                    width: '90%'
                 }}>
                 {
                     sections.map((section) =>
                         <Grid key={section.name} item xs={12}>
                             <Button
+                                fullWidth
                                 sx={{
+                                    justifyContent: "flex-start",
                                     textTransform: 'none',
                                     color: 'black'
                                 }}
