@@ -30,7 +30,7 @@ const RightHandSide = () => {
   }, [posts]);
 
   return (
-    <div className="right mt-4">
+    <div className="mt-4">
       {isShow ? (
         <>
           {posts.map((post) => (

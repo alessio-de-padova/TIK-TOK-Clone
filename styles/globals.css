@@ -384,11 +384,7 @@ main {
   background-color: rgba(22, 24, 35, 0.06);
 }
 
-.right {
-  flex: 0.65;
-  height: 90vh;
-  overflow-y: scroll;
-}
+
 
 .post {
   margin-top: 2rem;
@@ -514,16 +510,6 @@ video::-webkit-media-controls-time-remaining-display {
 
   .menu {
     z-index: 10;
-  }
-
-  .left {
-    flex: 0.1;
-    border: none;
-    border-right: 1px solid rgb(200, 200, 200);
-  }
-
-  .left:hover {
-    overflow: hidden;
   }
 
   .right {

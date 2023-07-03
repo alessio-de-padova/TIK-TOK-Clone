@@ -26,8 +26,6 @@ const Btns = () => {
     }, []);
 
 
-
-
     const sections = [
         {
             name: 'For you',
@@ -70,10 +68,14 @@ const Btns = () => {
             </Grid>
 
             {!user && (
-                <div className="login">
+                <Grid
+                    container
+                    sx={gridStyle}
+                >
                     <p>Log in to follow creators, like videos, and view comments</p>
                     <button onClick={() => router.push("/auth/signin")}>Log in</button>
-                </div>
+                </Grid>
+
             )}
 
 
@@ -99,7 +101,7 @@ const Btns = () => {
                                 textTransform: 'none'
                             }}
                             variant={'secondary'}
-                            startIcon={ <Avatar src={data.avatar} alt="avatar" />}
+                            startIcon={<Avatar src={data.avatar} alt="avatar"/>}
                             display={'flex'}
                         >
                             {data.username}
