@@ -46,7 +46,7 @@ const Btns = () => {
             <Grid
                 container
                 spacing={2}
-                sx={gridStyle}
+                sx={(theme) => gridStyle(theme)}
             >
                 {
                     sections.map((section) =>
@@ -70,7 +70,7 @@ const Btns = () => {
             {!user && (
                 <Grid
                     container
-                    sx={gridStyle}
+                    sx={(theme) => gridStyle(theme)}
                 >
                     <p>Log in to follow creators, like videos, and view comments</p>
                     <button onClick={() => router.push("/auth/signin")}>Log in</button>
@@ -82,7 +82,7 @@ const Btns = () => {
             <Grid
                 container
                 spacing={1}
-                sx={gridStyle}
+                sx={(theme) => gridStyle(theme)}
             >
                 <Grid item xs={12}>
                     <Typography

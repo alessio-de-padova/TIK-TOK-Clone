@@ -10,7 +10,7 @@ const Tags = () => {
         <Grid
             container
             spacing={1}
-            sx={gridStyle}
+            sx={(theme) => gridStyle(theme)}
         >
             <Grid item xs={12}>
                 <Typography
