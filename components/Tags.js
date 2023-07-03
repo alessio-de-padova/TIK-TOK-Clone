@@ -6,6 +6,7 @@ import {gridStyle, gridTitleStyle} from "./styles";
 
 const Tags = () => {
 
+
     return (
         <Grid
             container
@@ -22,7 +23,7 @@ const Tags = () => {
             {topics?.map((item, index) => (
                 <Chip
                     key={item.name}
-                    avatar={<Avatar alt="Natacha" src={item.icon}/>}
+                    avatar={item.icon}
                     label={item.name}
                     variant="outlined"
                 />
