@@ -64,61 +64,7 @@ export const muiTheme =
         shadows: softShadows
     };
 
-export const defaultTheme = {
-    repertoryColor: "#E94FB2",
-    materiaMedicaColor: "#4E74EA",
-    patientColor: '#58CDEA',
-    searchColor: "#25A9E0",
-    mapColor: "#606060",
-    storeColor: "#606060",
-    clipboardColor: "#dcd109",
-    consultationColor: "#18c954",
-    remedyColor: "#34e371",
-    translationColor: "#606060",
-    direction: 'ltr',
-    components: {
-        MuiInputBase: {
-            input: {
-                '&::placeholder': {
-                    opacity: 1,
-                    color: blueGrey['600']
-                }
-            }
-        },
-        MuiBadge: {
-            styleOverrides: {
-                root: {
-                    fontWeight: 'bold'
-                },
-                colorPrimary: {
-                    color: 'white',
-                    fontWeight: 'bold'
-                },
-                colorSecondary: {
-                    color: '#25A9E0',
-                    fontWeight: 'bold',
-                    border: '1px solid #25A9E0'
-                },
-            }
-        },
-        MuiButton: {
-            styleOverrides: {
-                root: {
-                    fontWeight: 'bold'
-                },
-                containedPrimary: {
-                    color: 'white',
-                    fontWeight: 'bold'
-                },
-                containedSecondary: {
-                    color: '#25A9E0',
-                    fontWeight: 'bold',
-                    border: '1px solid #25A9E0'
-                },
-            }
-        }
-    },
-}
+
 
 const themes = {
     'darkTheme': darkTheme,
@@ -128,7 +74,7 @@ const themes = {
 
 export const createMuiTheme = ( {theme = 'muiTheme', direction }) => {
     return createTheme(
-        _.merge(defaultTheme, themes[theme], {direction})
+        _.merge(themes[theme], {direction})
     );
 
 };

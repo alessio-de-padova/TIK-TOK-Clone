@@ -4,10 +4,11 @@ import {useAuthState} from "react-firebase-hooks/auth";
 import {useRouter} from "next/router";
 
 import {auth} from "../firebase/firebase";
-import {Box, Button, Grid, Typography} from "@mui/material";
+import {Avatar, Box, Button, Grid, Typography} from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
 import GroupIcon from '@mui/icons-material/Group';
 import VideocamIcon from '@mui/icons-material/Videocam';
+import {gridStyle, gridTitleStyle} from "./styles";
 
 const Btns = () => {
     const [user] = useAuthState(auth);
@@ -23,6 +24,8 @@ const Btns = () => {
         }));
         setSuggestions(suggestions);
     }, []);
+
+
 
 
     const sections = [
@@ -45,20 +48,17 @@ const Btns = () => {
             <Grid
                 container
                 spacing={2}
-                sx={{
-                    borderBottom: '1px solid rgb(200, 200, 200)',
-                    paddingBottom: '1rem',
-                    margin: '1rem 1rem 0 8rem',
-                }}>
+                sx={gridStyle}
+            >
                 {
                     sections.map((section) =>
                         <Grid key={section.name} item xs={12}>
                             <Button
                                 fullWidth
+                                variant={'secondary'}
                                 sx={{
                                     justifyContent: "flex-start",
-                                    textTransform: 'none',
-                                    color: 'black'
+                                    textTransform: 'none'
                                 }}
                                 startIcon={section.icon}>
                                 {section.name}
@@ -76,15 +76,37 @@ const Btns = () => {
                 </div>
             )}
 
-            <div className="accounts">
-                <p>Suggested accounts</p>
+
+            <Grid
+                container
+                spacing={1}
+                sx={gridStyle}
+            >
+                <Grid item xs={12}>
+                    <Typography
+                        sx={(theme) => gridTitleStyle(theme)}
+                    >
+                        Suggested accounts
+                    </Typography>
+                </Grid>
+                <Box mt={2}/>
                 {suggestions.map((data, index) => (
-                    <div className="user" key={index}>
-                        <img src={data.avatar} alt="avatar"/>
-                        <h6 className="username">{data.username}</h6>
-                    </div>
+                    <Grid item xs={12} key={index}>
+                        <Button
+                            fullWidth
+                            sx={{
+                                justifyContent: "flex-start",
+                                textTransform: 'none'
+                            }}
+                            variant={'secondary'}
+                            startIcon={ <Avatar src={data.avatar} alt="avatar" />}
+                            display={'flex'}
+                        >
+                            {data.username}
+                        </Button>
+                    </Grid>
                 ))}
-            </div>
+            </Grid>
         </>
     );
 };
