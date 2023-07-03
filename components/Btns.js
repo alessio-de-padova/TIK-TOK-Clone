@@ -54,8 +54,12 @@ const Btns = () => {
                             <Button
                                 fullWidth
                                 sx={{
-                                    justifyContent: "flex-start",
-                                    textTransform: 'none'
+                                    color: (theme) => theme.palette.text.primary,
+                                    padding: '10px 8px',
+                                    justifyContent: 'flex-start',
+                                    textTransform: 'none',
+                                    letterSpacing: 0,
+                                    width: '100%'
                                 }}
                                 color={'secondary'}
                                 startIcon={section.icon}>
@@ -84,7 +88,7 @@ const Btns = () => {
                 sx={(theme) => gridStyle(theme)}
             >
                 <Grid item xs={12}>
-                    <Typography variant={'span'}>
+                    <Typography>
                         Suggested accounts
                     </Typography>
                 </Grid>

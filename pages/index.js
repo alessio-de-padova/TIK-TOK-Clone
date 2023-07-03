@@ -7,7 +7,10 @@ export default function Home() {
     return (
         <div>
             <Header isShow={true}/>
-            <Grid container sx={(theme) => ({ backgroundColor: theme.palette.background.paper, marginTop: '3rem'})}>
+            <Grid
+                container
+                sx={(theme) => ({ backgroundColor: theme.palette.background.paper, marginTop: '3rem'})}
+            >
                 <Grid
                     item
                     xs={12}
