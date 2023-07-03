@@ -1,12 +1,13 @@
 import Header from "../components/Header";
 import LeftHandSide from "../components/LeftHandSide";
 import RightHandSide from "../components/RightHandSide";
-import {Grid} from "@mui/material";
+import {Grid, Paper} from "@mui/material";
 
 export default function Home() {
     return (
         <div>
             <Header isShow={true}/>
+            <Paper>
             <Grid
                 container
                 sx={(theme) => ({ backgroundColor: theme.palette.background.paper, marginTop: '3rem'})}
@@ -35,6 +36,7 @@ export default function Home() {
                     <RightHandSide/>
                 </Grid>
             </Grid>
+            </Paper>
         </div>
     )
 }

@@ -205,7 +205,7 @@ const Post = ({
                   {company}
                 </p>
                 <div className="flex ml-56">
-                  <Button color={'primary'} variant={'filled'} >Follow</Button>
+                  <Button color={'primary'} variant={'outlined'} >Follow</Button>
 
                 </div>
               </div>

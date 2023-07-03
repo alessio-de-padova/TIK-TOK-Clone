@@ -88,7 +88,7 @@ const Btns = () => {
                 sx={(theme) => gridStyle(theme)}
             >
                 <Grid item xs={12}>
-                    <Typography>
+                    <Typography >
                         Suggested accounts
                     </Typography>
                 </Grid>
