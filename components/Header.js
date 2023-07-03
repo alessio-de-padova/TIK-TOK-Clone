@@ -25,7 +25,7 @@ const Header = ({isShow}) => {
     return (
         <AppBar
             sx={{
-                // boxShadow: 'unset',
+                backgroundColor: (theme) => theme.palette.background.default,
                 height: '4rem'
             }}
         >
