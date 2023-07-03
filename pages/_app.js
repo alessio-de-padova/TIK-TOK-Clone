@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import {ThemeProvider} from "@mui/material";
-import {createMuiTheme} from "./theme";
+import {createMuiTheme} from "../theme";
 
 function MyApp({Component, pageProps}) {
 

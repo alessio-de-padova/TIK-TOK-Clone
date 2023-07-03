@@ -21,7 +21,7 @@ export const darkTheme =
                     paper: '#282C34'
                 },
                 primary: {
-                    main: "#c00dd3"
+                    main: "#282C343"
                 },
                 secondary: {
                     main: '#282C34',
@@ -50,7 +50,7 @@ export const muiTheme =
                 paper: common.white
             },
             primary: {
-                main: "#25A9E0"
+                main: "#FFFFFF"
             },
             secondary: {
                 main: '#FFFAFA',

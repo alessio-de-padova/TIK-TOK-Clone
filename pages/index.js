@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <div>
             <Header isShow={true}/>
-            <Grid container>
+            <Grid container sx={{marginTop: '3rem'}}>
                 <Grid
                     item
                     xs={12}

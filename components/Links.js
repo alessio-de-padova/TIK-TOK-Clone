@@ -18,7 +18,7 @@ const Links = () => {
           <a href="#">ByteDance</a>
         </div>
         <div className="copyright">
-          <h6>&copy; {moment().format("YYYY")} TikTok</h6>
+          <h6>&copy; {moment().format("YYYY")} LePorn</h6>
         </div>
       </div>
     </div>
