@@ -1,69 +1,34 @@
 import _ from 'lodash';
 import {createTheme} from '@mui/material/styles';
 import {softShadows, strongShadows} from './shadows';
-import { blueGrey, common} from '@mui/material/colors'
+import {blueGrey, common} from '@mui/material/colors'
 
 export const darkTheme =
-        {
-            palette: {
-                type: 'dark',
-                action: {
-                    active: 'rgba(255, 255, 255, 0.54)',
-                    hover: 'rgba(255, 255, 255, 0.04)',
-                    selected: 'rgba(255, 255, 255, 0.08)',
-                    disabled: 'rgba(255, 255, 255, 0.26)',
-                    disabledBackground: 'rgba(255, 255, 255, 0.12)',
-                    focus: 'rgba(255, 255, 255, 0.12)'
-                },
-                background: {
-                    default: '#282C34',
-                    dark: '#282C34',
-                    paper: '#282C34'
-                },
-                primary: {
-                    main: "#282C343"
-                },
-                secondary: {
-                    main: '#282C34',
-                },
-                text: {
-                    primary: '#e6e5e8',
-                    secondary: '#adb0bb'
-                }
-            },
-            shadows: strongShadows,
-            boxShadow: '#242424'
-        }
+    {
+        palette: {
+            mode: 'dark',
+            text: {
+                primary: 'rgba(255, 255, 255, 0.87)',
+                secondary: 'rgba(255, 255, 255, 0.6)',
+                disabled: 'rgba(255, 255, 255, 0.38)',
+            }
+
+        },
+        shadows: strongShadows,
+    }
 
 export const muiTheme =
     {
         palette: {
-            type: 'light',
-            action: {
-                active: blueGrey['600'],
-                selected: '#eaeaea',
-                hover: '#eaeaea'
-            },
-            background: {
-                default: common.white,
-                dark: '#eaeaea',
-                paper: common.white
-            },
-            primary: {
-                main: "#FFFFFF"
-            },
-            secondary: {
-                main: '#FFFAFA',
-            },
+            mode: 'light',
             text: {
-                primary: blueGrey['900'],
-                secondary: blueGrey['600']
+                primary: 'rgba(0, 0, 0, 0.87)',
+                secondary: 'rgba(0, 0, 0, 0.6)',
+                disabled: 'rgba(0, 0, 0, 0.38)'
             }
         },
-        boxShadow: '#c6c6c6',
         shadows: softShadows
     };
-
 
 
 const themes = {
@@ -72,7 +37,7 @@ const themes = {
 }
 
 
-export const createMuiTheme = ( {theme = 'muiTheme', direction }) => {
+export const createMuiTheme = ({theme = 'muiTheme', direction}) => {
     return createTheme(
         _.merge(themes[theme], {direction})
     );

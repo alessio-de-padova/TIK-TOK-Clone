@@ -22,11 +22,10 @@ const Header = ({isShow}) => {
     };
 
 
-
-
     return (
         <AppBar
             sx={{
+                // boxShadow: 'unset',
                 height: '4rem'
             }}
         >

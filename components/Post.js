@@ -23,6 +23,7 @@ import { IoIosShareAlt } from "react-icons/io";
 
 import { auth, firestore } from "../firebase/firebase";
 import Comments from "./Comments";
+import {Button, Typography} from "@mui/material";
 
 const Post = ({
   caption,
@@ -195,19 +196,17 @@ const Post = ({
             <div>
               <div className="flex items-center gap-2">
                 <p className="flex gap-2 items-center md:text-md font-bold text-primary">
-                  {username}
+                    <Typography>
+                        {username}
+                    </Typography>
                   <GoVerified className="text-blue-400 text-md" />
                 </p>
                 <p className="capitalize font-medium text-xs text-gray-500 hidden md:block">
                   {company}
                 </p>
                 <div className="flex ml-56">
-                  <button
-                    type="button"
-                    className="inline-block px-4 py-1.5 border border-pink-500 text-pink-500 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                  >
-                    Follow
-                  </button>
+                  <Button color={'primary'} variant={'filled'} >Follow</Button>
+
                 </div>
               </div>
 

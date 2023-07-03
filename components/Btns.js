@@ -4,7 +4,7 @@ import {useAuthState} from "react-firebase-hooks/auth";
 import {useRouter} from "next/router";
 
 import {auth} from "../firebase/firebase";
-import {Avatar, Box, Button, Grid, Typography} from "@mui/material";
+import {Avatar, Box, Button, Chip, Grid, Typography} from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
 import GroupIcon from '@mui/icons-material/Group';
 import VideocamIcon from '@mui/icons-material/Videocam';
@@ -53,11 +53,11 @@ const Btns = () => {
                         <Grid key={section.name} item xs={12}>
                             <Button
                                 fullWidth
-                                variant={'secondary'}
                                 sx={{
                                     justifyContent: "flex-start",
                                     textTransform: 'none'
                                 }}
+                                color={'secondary'}
                                 startIcon={section.icon}>
                                 {section.name}
                             </Button>
@@ -78,34 +78,26 @@ const Btns = () => {
 
             )}
 
-
             <Grid
                 container
                 spacing={1}
                 sx={(theme) => gridStyle(theme)}
             >
                 <Grid item xs={12}>
-                    <Typography
-                        sx={(theme) => gridTitleStyle(theme)}
-                    >
+                    <Typography variant={'span'}>
                         Suggested accounts
                     </Typography>
                 </Grid>
                 <Box mt={2}/>
                 {suggestions.map((data, index) => (
                     <Grid item xs={12} key={index}>
-                        <Button
-                            fullWidth
-                            sx={{
-                                justifyContent: "flex-start",
-                                textTransform: 'none'
-                            }}
-                            variant={'secondary'}
-                            startIcon={<Avatar src={data.avatar} alt="avatar"/>}
-                            display={'flex'}
-                        >
-                            {data.username}
-                        </Button>
+                        <Chip
+                            onClick={() => console.log("CLICKED")}
+                            avatar={<Avatar src={data.avatar} alt="avatar"/>}
+                            label={data.username}
+                            variant="outlined"
+                        />
+
                     </Grid>
                 ))}
             </Grid>

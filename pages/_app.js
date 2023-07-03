@@ -6,7 +6,7 @@ import React from "react";
 
 function MyApp({Component, pageProps}) {
 
-    const theme = createMuiTheme({theme: 'muiTheme'});
+    const theme = createMuiTheme({theme: 'darkTheme'});
 
     return (
         <>

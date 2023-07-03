@@ -14,20 +14,21 @@ const Tags = () => {
             sx={(theme) => gridStyle(theme)}
         >
             <Grid item xs={12}>
-                <Typography
-                    sx={(theme) => gridTitleStyle(theme)}
-                >
+                <Typography>
                     Popular tags
                 </Typography>
             </Grid>
-            {topics?.map((item, index) => (
-                <Chip
-                    key={item.name}
-                    avatar={item.icon}
-                    label={item.name}
-                    variant="outlined"
-                />
-            ))}
+            <Box mt={2}>
+                {topics?.map((item, index) => (
+                    <Chip
+                        onClick={() => console.log("CLICKED")}
+                        key={index}
+                        avatar={item.icon}
+                        label={item.name}
+                        variant="outlined"
+                    />
+                ))}
+            </Box>
         </Grid>
     );
 };
